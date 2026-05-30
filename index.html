@@ -1,166 +1,190 @@
+# Página web completa para Todomix.Mayoristas
+
+Copia TODO este código y reemplázalo dentro de tu archivo `index.html` en GitHub.
+
+```html
 <!DOCTYPE html>
 <html lang="es">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Todomix.Mayoristas</title>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;900&display=swap" rel="stylesheet">
 
 <style>
-*{
-margin:0;
-padding:0;
-box-sizing:border-box;
-}
-
+*{margin:0;padding:0;box-sizing:border-box;}
 body{
-font-family:Arial, sans-serif;
-background:#f5f5f5;
+font-family:'Montserrat',sans-serif;
+background:#0d0d0d;
+color:white;
 }
 
 header{
-background:linear-gradient(to right,#ff5f00,#ffcc00);
-color:white;
-text-align:center;
+background:linear-gradient(135deg,#ff0080,#ff7b00,#ffe600,#00e5ff);
+background-size:300% 300%;
+animation:fondo 10s ease infinite;
 padding:60px 20px;
+text-align:center;
 }
 
-header h1{
-font-size:48px;
-margin-bottom:10px;
+@keyframes fondo{
+0%{background-position:0% 50%;}
+50%{background-position:100% 50%;}
+100%{background-position:0% 50%;}
 }
 
-header p{
-font-size:22px;
+.logo{
+font-size:60px;
+font-weight:900;
+text-transform:uppercase;
+text-shadow:0 0 10px #fff,0 0 20px #ff00d4,0 0 40px #00f7ff;
 }
 
-.boton{
+.subtitulo{
+font-size:24px;
+font-weight:700;
+margin-top:15px;
+}
+
+.btn{
 display:inline-block;
 margin-top:25px;
-padding:15px 30px;
+padding:18px 35px;
 background:#25D366;
 color:white;
-text-decoration:none;
-border-radius:12px;
-font-size:18px;
+font-size:22px;
 font-weight:bold;
+text-decoration:none;
+border-radius:15px;
+box-shadow:0 0 20px #25D366;
 }
 
-.seccion{
-padding:50px 20px;
+.nequi{
+margin-top:20px;
+font-size:28px;
+font-weight:800;
+}
+
+section{
+padding:60px 20px;
 text-align:center;
 }
 
-.seccion h2{
-font-size:35px;
-margin-bottom:30px;
-color:#333;
+h2{
+font-size:45px;
+margin-bottom:40px;
+text-shadow:0 0 10px #ff00d4;
 }
 
-.productos{
-display:flex;
-flex-wrap:wrap;
-justify-content:center;
+.grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
 gap:25px;
+max-width:1200px;
+margin:auto;
 }
 
 .card{
-background:white;
-width:300px;
-border-radius:18px;
+background:#1a1a1a;
+border-radius:25px;
 overflow:hidden;
-box-shadow:0 4px 12px rgba(0,0,0,.2);
+box-shadow:0 0 20px rgba(255,255,255,0.15);
+transition:0.3s;
+}
+
+.card:hover{
+transform:translateY(-10px) scale(1.03);
 }
 
 .card img{
 width:100%;
-height:220px;
+height:240px;
 object-fit:cover;
 }
 
 .card h3{
-font-size:24px;
-margin:15px 0;
+font-size:30px;
+margin:20px 0 10px;
+color:#ffe600;
 }
 
 .card p{
-padding:0 15px 20px;
-color:#555;
+padding:0 20px 25px;
+font-size:18px;
 }
 
 footer{
-background:#222;
-color:white;
+background:#111;
+padding:40px;
 text-align:center;
-padding:30px;
-margin-top:40px;
+font-size:20px;
 }
 </style>
 </head>
-
 <body>
 
 <header>
-<h1>Todomix.Mayoristas</h1>
-<p>Tecnología, hogar y mucho más</p>
-
-<a class="boton"
-href="https://wa.me/573148923305">
-Comprar por WhatsApp
-</a>
-
-<div style="margin-top:20px; display:flex; justify-content:center; align-items:center; gap:10px;">
-
-<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/83/Nequi_logo.svg/512px-Nequi_logo.svg.png"
-alt="Nequi"
-style="width:80px;">
-
-<p style="font-size:22px; font-weight:bold;">
-3148923305
-</p>
-
-</div>
+<div class="logo">✨ TODOMIX.MAYORISTAS ✨</div>
+<p class="subtitulo">Tecnología • Hogar • Belleza • Juguetería • Mucho Más</p>
+<a class="btn" href="https://wa.me/573148923305?text=Hola,%20quiero%20información%20de%20productos">Comprar por WhatsApp</a>
+<div class="nequi">💜 Nequi: 3148923305</div>
 </header>
 
-<section class="seccion">
-<h2>Nuestros Productos</h2>
-
-<div class="productos">
+<section>
+<h2>🔥 Nuestras Categorías 🔥</h2>
+<div class="grid">
 
 <div class="card">
 <img src="https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?w=800">
-<h3>Celulares</h3>
-<p>Tecnología al mejor precio.</p>
-</div>
-
-<div class="card">
-<img src="https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=800">
-<h3>Audífonos</h3>
-<p>Calidad garantizada.</p>
+<h3>📱 Tecnología</h3>
+<p>Celulares, audífonos, smartwatches, parlantes y accesorios.</p>
 </div>
 
 <div class="card">
 <img src="https://images.unsplash.com/photo-1556911220-bff31c812dba?w=800">
-<h3>Hogar</h3>
-<p>Todo para tu hogar.</p>
+<h3>🏠 Hogar</h3>
+<p>Electrodomésticos, cocina, decoración y productos para el hogar.</p>
 </div>
-<div class="product-card">
-    <img src="https://images.unsplash.com/photo-1608043152269-423dbba4e7e1?q=80&w=600&auto=format&fit=crop" alt="Parlante Pequeño">
-    <div class="product-info">
-        <h3>Parlante Portátil</h3>
-        <p>Tamaño compacto con un sonido sorprendentemente potente y nítido. Ideal para llevar a cualquier lugar.</p>
-        <p style="margin: 5px 0; font-size: 0.9em; color: #555;">🔋 <strong>Batería:</strong> Tiempo estimado de carga 6 horas</p>
-        <span class="price">$35.000</span>
-        <a href="https://wa.me/573148923305?text=Hola,%20estoy%20interesado%20en%20el%20parlante%20pequeño%20de%20$35.000" class="btn-buy" target="_blank">Comprar por WhatsApp</a>
-    </div>
+
+<div class="card">
+<img src="https://images.unsplash.com/photo-1522335789203-aabd1fc54bc9?w=800">
+<h3>💄 Belleza</h3>
+<p>Maquillaje, skincare, perfumes y accesorios de belleza.</p>
 </div>
+
+<div class="card">
+<img src="https://images.unsplash.com/photo-1515488042361-ee00e0ddd4e4?w=800">
+<h3>🧸 Juguetería</h3>
+<p>Juguetes, muñecas, carros, regalos y diversión para niños.</p>
+</div>
+
+</div>
+</section>
+
+<section>
+<h2>⭐ ¿Por Qué Comprar Con Nosotros?</h2>
+<div class="grid">
+<div class="card"><h3>🚚 Envíos</h3><p>Envíos rápidos y seguros.</p></div>
+<div class="card"><h3>💰 Precios Bajos</h3><p>Venta al mayor y detal.</p></div>
+<div class="card"><h3>✅ Calidad</h3><p>Productos seleccionados para nuestros clientes.</p></div>
 </div>
 </section>
 
 <footer>
-<h2>Todomix.Mayoristas</h2>
-<p>Ventas al mayor y detal</p>
+<h3>✨ TODOMIX.MAYORISTAS ✨</h3>
+<p>Todo lo que necesitas en un solo lugar</p>
 <p>WhatsApp: 3148923305</p>
 </footer>
 
 </body>
 </html>
+```
+
+Después de pegar el código:
+
+1. Borra el código viejo de `index.html`
+2. Pega este nuevo código
+3. Baja hasta abajo
+4. En **Commit changes** escribe: `pagina completa todomix`
+5. Dale **Commit changes**
+6. Espera 1 minuto y abre tu enlace de GitHub.
